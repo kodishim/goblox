@@ -1,0 +1,78 @@
+.env
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+!bin/.gitkeep
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the `#` to include it)
+# vendor/
+
+# Project-specific
+.idea/
+*.swp
+*.swo
+.vscode/
+*.vscode
+.DS_Store
+*.log
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux specific
+.directory
+
+# Certificate files
+*.cert
+*.key
+
+# Log files
+*.log
+
+# Golang specific files/directories
+*.a
+*.o
+*.p
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+# Go build cache
+Gopkg.lock
+Godeps/
+
+# Executables
+*.exe
+*.test
+*.dll
+*.so
+*.dylib
+
+# JetBrains IDEs
+.idea/
+
+# VSCode
+.vscode/
+
+# Temporary files
+tmp/
