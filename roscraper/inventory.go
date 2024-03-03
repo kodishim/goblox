@@ -39,11 +39,11 @@ func (r *Roscraper) FetchAllUserItems(userID int) ([]*robloxapi.UserItem, error)
 		if err != nil {
 			return nil, err
 		}
+		allUserItems = append(allUserItems, resp.Items...)
 		cur = resp.NextPageCursor
 		if cur == "" {
 			break
 		}
-		allUserItems = append(allUserItems, resp.Items...)
 	}
 	return allUserItems, nil
 }
