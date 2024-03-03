@@ -9,6 +9,17 @@ import (
 	"github.com/kodishim/goblox/robloxapi"
 )
 
+func (r *Roscraper) FetchCatalogItemData(itemID int) (*robloxapi.CatalogItemData, error) {
+	itemsData, err := r.FetchCatalogItemsData(itemID)
+	if err != nil {
+		return nil, err
+	}
+	if len(itemsData) != 1 {
+		return nil, fmt.Errorf("expected 1 items data but got %d", len(itemsData))
+	}
+	return itemsData[0], nil
+}
+
 func (r *Roscraper) FetchCatalogItemsData(itemIDs ...int) ([]*robloxapi.CatalogItemData, error) {
 	if len(itemIDs) > 100 {
 		return nil, errors.New("error can't fetch more than 100 item's catalog data at once")

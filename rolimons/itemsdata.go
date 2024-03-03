@@ -97,3 +97,14 @@ func FetchItemsData(forceLive ...bool) (map[int]*ItemData, error) {
 	ItemsDataCache.LastUpdated = time.Now()
 	return itemsData, nil
 }
+
+func FetchItemData(itemID int) (*ItemData, error) {
+	itemsData, err := FetchItemsData()
+	if err != nil {
+		return nil, err
+	}
+	if itemsData[itemID] == nil {
+		return nil, fmt.Errorf("no item with id %d", itemID)
+	}
+	return itemsData[itemID], nil
+}
