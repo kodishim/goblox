@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"example.com/robloxapi"
+	"github.com/kodishim/goblox/robloxapi"
 )
 
 var tradeData struct {

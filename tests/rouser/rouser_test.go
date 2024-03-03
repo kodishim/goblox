@@ -4,8 +4,8 @@ import (
 	"log"
 	"os"
 
-	"example.com/rouser"
 	"github.com/joho/godotenv"
+	"github.com/kodishim/goblox/rouser"
 )
 
 var (

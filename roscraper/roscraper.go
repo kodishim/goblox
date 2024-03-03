@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"time"
 
-	"example.com/robloxapi"
+	"github.com/kodishim/goblox/robloxapi"
 )
 
 type Roscraper struct {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"example.com/robloxapi"
+	"github.com/kodishim/goblox/robloxapi"
 )
 
 // FetchTrade gets detailed information about a trade.

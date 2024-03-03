@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"example.com/robloxapi"
+	"github.com/kodishim/goblox/robloxapi"
 )
 
 func (r *Roscraper) FetchResaleItemData(itemID int) (*robloxapi.ResaleItemData, error) {

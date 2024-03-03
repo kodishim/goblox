@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"example.com/robloxapi"
+	"github.com/kodishim/goblox/robloxapi"
 	"github.com/xlzd/gotp"
 )
 

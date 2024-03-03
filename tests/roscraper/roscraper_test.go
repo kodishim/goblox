@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"example.com/roscraper"
+	"github.com/kodishim/goblox/roscraper"
 )
 
 var rscraper *roscraper.Roscraper

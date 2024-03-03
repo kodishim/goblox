@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"example.com/robloxapi"
+	"github.com/kodishim/goblox/robloxapi"
 )
 
 func (r *Rouser) FetchAuthenticatedUser() (*robloxapi.AuthenticatedUser, error) {

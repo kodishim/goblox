@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"example.com/rolimons"
 	"github.com/joho/godotenv"
+	"github.com/kodishim/goblox/rolimons"
 )
 
 var ruser *rolimons.RolimonsUser

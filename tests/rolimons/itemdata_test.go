@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"example.com/rolimons"
+	"github.com/kodishim/goblox/rolimons"
 )
 
 func init() {}
