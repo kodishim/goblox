@@ -49,6 +49,7 @@ func (r *Rouser) GetHeader(solveTFAChallengeRes ...*SolveTFAChallengeRes) http.H
 
 func (r *Rouser) Request(method string, url string, body []byte) (*robloxapi.Response, error) {
 	var solveTFAChallengeRes *SolveTFAChallengeRes
+	internalServerErrors := 0
 	for {
 		req, err := http.NewRequest(method, url, bytes.NewBuffer(body))
 		if err != nil {
@@ -65,7 +66,11 @@ func (r *Rouser) Request(method string, url string, body []byte) (*robloxapi.Res
 				continue
 			}
 			if resp.APIError.Message == "InternalServerError" {
-				continue
+				internalServerErrors++
+				if internalServerErrors <= 5 {
+					continue
+				}
+				return nil, resp.APIError
 			}
 			if resp.APIError.Message == "Challenge is required to authorize the request" && resp.Header.Get("Rblx-Challenge-Type") == "twostepverification" {
 				rblxChallengeID := resp.Header.Get("Rblx-Challenge-Id")
