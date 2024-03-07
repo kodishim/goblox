@@ -46,7 +46,7 @@ func FetchItemsData(forceLive ...bool) (map[int]*ItemData, error) {
 		return ItemsDataCache.ItemsData, nil
 	}
 	itemsData := make(map[int]*ItemData)
-	resp, err := http.Get("https://www.rolimons.com/itemapi/itemdetails")
+	resp, err := http.Get("https://api.rolimons.com/items/v1/itemdetails")
 	if err != nil {
 		return nil, fmt.Errorf("error sending request: %w", err)
 	}
