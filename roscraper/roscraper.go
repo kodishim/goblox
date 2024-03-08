@@ -72,7 +72,7 @@ func (r *Roscraper) Request(method string, url string, body []byte) (*robloxapi.
 				r.CSRFToken = resp.Header.Get("X-Csrf-Token")
 				continue
 			}
-			if resp.APIError.Message == "Too Many Requests" || resp.APIError.Message == "InternalServerError" {
+			if resp.APIError.Message == "Too many requests" || resp.APIError.Message == "InternalServerError" {
 				swapped := r.SwapProxy()
 				if swapped {
 					continue
