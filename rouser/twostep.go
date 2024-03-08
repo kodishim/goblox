@@ -18,7 +18,7 @@ type SolveTFAChallengeRes struct {
 }
 
 func (r *Rouser) SolveTFAChallenge(rblxChallengeID string, rblxChallengeMetadata string) (*SolveTFAChallengeRes, error) {
-	rblxChallengeMetadataBytes, err := base64.RawStdEncoding.DecodeString(rblxChallengeMetadata)
+	rblxChallengeMetadataBytes, err := base64.StdEncoding.DecodeString(rblxChallengeMetadata)
 	if err != nil {
 		return nil, fmt.Errorf("error decoding rblx challenge metadata %s: %w", rblxChallengeMetadata, err)
 	}
