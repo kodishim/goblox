@@ -76,6 +76,9 @@ func (r *Roscraper) Request(method string, url string, body []byte) (*robloxapi.
 				swapped := r.SwapProxy()
 				if swapped {
 					continue
+				} else {
+					time.Sleep(time.Second * 10)
+					continue
 				}
 			}
 		}
