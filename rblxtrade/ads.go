@@ -34,16 +34,16 @@ func (u *RblxTradeUser) getCookieHeader() string {
 }
 
 var (
-	TagAny        = 1
-	TagRares      = 2
-	TagDemand     = 3
-	TagRap        = 4
-	TagRobux      = 5
-	TagProjecteds = 6
-	TagUpgrade    = 7
-	TagDowngrade  = 8
-	TagValue      = 9
-	TagAdds       = 10
+	TagAny        = 0
+	TagRares      = 1
+	TagDemand     = 2
+	TagRap        = 3
+	TagRobux      = 4
+	TagProjecteds = 5
+	TagUpgrade    = 6
+	TagDowngrade  = 7
+	TagValue      = 8
+	TagAdds       = 9
 )
 
 func (u *RblxTradeUser) CreateAD(userID int, offer []int, request []int, offerRobux int, requestRobux int, requestTags []int) error {
