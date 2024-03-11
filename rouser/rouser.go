@@ -20,12 +20,12 @@ type Rouser struct {
 }
 
 func New(cookie string, tfaSecret string) (*Rouser, error) {
-	if !strings.Contains(cookie, ".ROBLOSECURITY=_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_") {
-		cookie = ".ROBLOSECURITY=_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_" + cookie
+	if !strings.Contains(cookie, "_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_") {
+		cookie = "_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_" + cookie
 	}
 	r := &Rouser{
 		Client:    &http.Client{Timeout: 10 * time.Second},
-		Cookie:    cookie,
+		Cookie:    ".ROBLOSECURITY=" + cookie,
 		TFASecret: tfaSecret,
 		CSRFToken: "",
 	}
