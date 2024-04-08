@@ -69,7 +69,7 @@ func (r *Rouser) Request(method string, url string, body []byte) (*robloxapi.Res
 				r.CSRFToken = resp.Header.Get("X-Csrf-Token")
 				continue
 			}
-			if resp.APIError.Message == "InternalServerError" {
+			if resp.APIError.Message == "InternalServerError" || resp.APIError.Message == "An unknown error occured." {
 				internalServerErrors++
 				if internalServerErrors <= 5 {
 					continue
