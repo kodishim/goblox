@@ -33,7 +33,7 @@ var (
 )
 
 func (u *RolimonsUser) CreateAD(userID int, offer []int, request []int, tags []string) error {
-	url := "https://api.rolimons.com/tradeads/v1/create"
+	url := "https://api.rolimons.com/tradeads/v1/createad"
 
 	var body struct {
 		PlayerID       int      `json:"player_id"`
